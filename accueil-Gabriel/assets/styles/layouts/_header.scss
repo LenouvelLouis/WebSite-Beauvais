@@ -1,0 +1,27 @@
+/************************FICHIER SCSS QUI COMPORTE LE STYLE DU HEADER******/
+header {
+  //on cible l'élement HTML header tous le style qui suit ne modifie que les éléments contenus dans le header
+  min-height: 100vh; //l'élément header fait quoi qu'il arrive 100% de la taille de l'écran de l'utilisateur
+  @media screen and (max-width: 900px) {
+    //lorsque on passe en version mobile
+    display: none; //l'header disparait
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  h1 {
+    font-family: $font1;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: $white1;
+    text-align: center;
+    @media screen and (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 1.3rem;
+    }
+  }
+}

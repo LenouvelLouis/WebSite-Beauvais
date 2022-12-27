@@ -1,0 +1,105 @@
+/************************PARAMETRES GENERAUX DE LA PAGE D'ACCUEIL******************/
+
+/***************************POLICES*****************************/
+
+@font-face {
+  font-family: "InterB";
+  src: url(../../../fonts/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: "InterL";
+  src: url(../../../fonts/Inter-Light.ttf);
+}
+@font-face {
+  font-family: "OpenL";
+  src: url(../../../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: "MerriI";
+  src: url(../../../fonts/Merriweather-LightItalic.ttf);
+}
+$font1: "InterB", serif;
+$font2: "InterL", sans-serif;
+$font3: "OpenL", sans-serif;
+$font4: "MerriI", sans-serif;
+
+/***************************COULEURS***********************/
+$black1: black;
+$black2: #2e2d2d;
+$white1: white;
+$grey1: #737373;
+$grey2: #afa9a9;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(../img/bg.png) fixed center/cover; //background en position fixed
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+li,
+a,
+i {
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+#page {
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: 900px) {
+    // si largeur inferieur à 900px
+    width: 90%;
+  }
+}
+.title {
+  //TOUS LES TITRES DE LA PAGE
+  font-family: $font1;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @media screen and (max-width: 1000px) {
+    // si largeur inferieur à 1000px
+    font-size: 1.5rem;
+  }
+}
+.sub-title {
+  //TOUS LES SOUS TITRES DE LA PAGE
+  font-family: $font2;
+}
+p {
+  // Tous les paragraphes de la page
+  color: $black2;
+  font-family: $font3;
+  line-height: 25px;
+  @media screen and (max-width: 800px) {
+    // si largeur inferieur à 800px
+    font-size: 0.9rem;
+  }
+}
+
+.btn {
+  // Les éléments avec la class btn
+  width: 180px;
+  background: white;
+  font-family: $font1;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+#navbar .menu .left li:first-child {
+  //le premier élément de la navbar (accueil)
+  background: white; //background différent des autres éléments de la liste lorsque on est sur la page d'accueil
+}
+#navbar .menu .left li:first-child a {
+  //le premier élément de la navbar (accueil)
+  color: black; //couleur de la police différente des autres éléments de la liste lorsque on est sur la page d'accueil
+}
